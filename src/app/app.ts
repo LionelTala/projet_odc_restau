@@ -11,7 +11,15 @@ import { FormsModule } from '@angular/forms';
 export class App {
   protected readonly title = signal('restoApp');
 
-
+  ngOnInit(): void {
+    // Cacher le loader après le chargement
+    const loader = document.getElementById('loader');
+    if (loader) {
+      setTimeout(() => {
+        loader.classList.add('hidden');
+      }, 500); // 500ms pour que les animations soient fluides
+    }
+  }
 
 
 

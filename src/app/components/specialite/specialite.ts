@@ -26,7 +26,7 @@ export class Specialite {
       nom: 'Taro',
       description: 'Pâte de taro pilé accompagnée d\'une sauce jaune aux épices locales et à la pierre calcaire.',
       prix: '3500 FCFA',
-      image: 'assets/images/taro.jpg'
+      image: 'assets/images/taro.webp'
     },
     {
       nom: 'Koki',
