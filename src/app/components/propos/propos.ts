@@ -9,14 +9,12 @@ import { Component } from '@angular/core';
 export class Propos {
 
   restaurant = {
-    nom: 'Saveurs du Cameroun',
+    nom: 'Le Calao Doré',
     annee: '2015',
     description: `
-      Fondé en 2015 par la famille Nkolo, "Saveurs du Cameroun" est né d'une passion
+      Fondé en 2015 par la famille ......., "Le Calao Doré" est né d'une passion
       pour la cuisine traditionnelle camerounaise. Notre mission est de faire découvrir
-      la richesse et la diversité des plats de nos régions, du Nord-Ouest au Sud-Ouest,
-      du Littoral à l'Extrême-Nord.
-    `,
+      la richesse et la diversité des plats de nos régions,`,
     histoire: `
       Dans notre cuisine, nous utilisons des ingrédients frais, locaux et de saison.
       Chaque plat est préparé avec amour et respect des traditions, en utilisant

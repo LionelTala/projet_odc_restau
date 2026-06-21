@@ -24,8 +24,8 @@ export class Footer {
     ],
     contact: {
       telephone: '+237 6 59666110',
-      email: 'contact@saveurs-cameroun.com',
-      adresse: 'Boulevard de la République, Quartier Bonanjo, Douala, Cameroun'
+      email: 'contact@calao-dore.com',
+      adresse: 'Akwa , Douala'
     },
     reseaux: [
       { nom: 'Facebook', icone: 'fab fa-facebook-f', couleur: 'hover:bg-blue-600' },

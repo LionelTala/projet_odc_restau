@@ -1,21 +1,17 @@
 <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- ===== CONTENEUR PRINCIPAL ===== -->
-    <div class="flex justify-between items-center h-16">
+     <div class="flex justify-between items-center h-16">
 
-      <!-- ===== LOGO ===== -->
-      <div class="flex items-center space-x-2">
-        <!-- On utilise <i> avec les classes Font Awesome -->
-        <i class="fas fa-utensils text-2xl text-green-600"></i>
-        <span class="text-2xl font-bold text-green-600">Saveurs </span>
-        <span class="text-2xl font-bold text-red-600">du</span>
-        <span class="text-2xl font-bold text-yellow-400">Cameroun</span>
+       <div class="flex items-center space-x-2">
+         <i class="fas fa-utensils text-2xl text-green-600"></i>
+        <span class="text-2xl font-bold text-green-600">Le </span>
+        <span class="text-2xl font-bold text-red-600">Calao</span>
+        <span class="text-2xl font-bold text-yellow-400">Doré</span>
 
       </div>
 
-      <!-- ===== MENU GRANDS ÉCRANS ===== -->
-      <div class="hidden md:flex items-center space-x-8">
+       <div class="hidden md:flex items-center space-x-8">
         <a href="#" class="text-gray-700 hover:text-emerald-700 transition duration-300 font-medium flex items-center space-x-2">
           <i class="fas fa-home text-sm"></i>
           <span>Accueil</span>
@@ -39,38 +35,35 @@
         </a>
       </div>
 
-      <!-- ===== BOUTON BURGER (mobile) ===== -->
-      <button
+       <button
         (click)="toogleMenu()"
         class="md:hidden flex items-center justify-center p-2 hover:bg-gray-100 rounded-lg transition">
-        <!-- Le burger change d'icône selon l'état -->
-        <i
+         <i
           [class]="isMenuOpen ? 'fas fa-times text-2xl text-gray-700' : 'fas fa-bars text-2xl text-gray-700'">
         </i>
       </button>
 
     </div>
 
-    <!-- ===== MENU DÉROULANT (mobile) ===== -->
-    @if(isMenuOpen){
+     @if(isMenuOpen){
       <div class="md:hidden bg-white shadow-lg py-4 px-6 flex flex-col space-y-4 border-t border-gray-200">
         <a href="#" class="text-gray-700 hover:text-emerald-700 transition font-medium flex items-center space-x-3">
           <i class="fas fa-home text-sm w-5"></i>
           <span>Accueil</span>
         </a>
-        <a href="#" class="text-gray-700 hover:text-emerald-700 transition font-medium flex items-center space-x-3">
+        <a href="#specialites" class="text-gray-700 hover:text-emerald-700 transition font-medium flex items-center space-x-3">
           <i class="fas fa-utensils text-sm w-5"></i>
           <span>Spécialités</span>
         </a>
-        <a href="#" class="text-gray-700 hover:text-emerald-700 transition font-medium flex items-center space-x-3">
+        <a href="#apropos" class="text-gray-700 hover:text-emerald-700 transition font-medium flex items-center space-x-3">
           <i class="fas fa-info-circle text-sm w-5"></i>
           <span>À propos</span>
         </a>
-        <a href="#" class="text-gray-700 hover:text-emerald-700 transition font-medium flex items-center space-x-3">
+        <a href="#temoignages" class="text-gray-700 hover:text-emerald-700 transition font-medium flex items-center space-x-3">
           <i class="fas fa-star text-sm w-5"></i>
           <span>Témoignages</span>
         </a>
-        <a href="#"
+        <a href="#reservations"
            class="bg-violet-700 text-white px-5 py-2 rounded-full hover:bg-emerald-700 hover:text-white transition font-medium text-center flex items-center justify-center space-x-2">
           <i class="fas fa-calendar-check text-sm"></i>
           <span>Réservation</span>
@@ -81,5 +74,4 @@
   </div>
 </nav>
 
-<!-- Espace pour que le contenu ne soit pas caché sous la navbar -->
-<div class="h-16"></div>
+ <div class="h-16"></div>
