@@ -1,0 +1,109 @@
+
+<!-- ============================================ -->
+<!-- ZONE 5 : TÉMOIGNAGES                        -->
+<!-- ============================================ -->
+
+<section id="temoignages" class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- ===== EN-TÊTE ===== -->
+    <div class="text-center mb-12">
+      <span class="inline-block bg-cameroun-yellow/20 text-cameroun-green px-4 py-1 rounded-full text-sm font-semibold mb-4">
+        <i class="fas fa-star mr-2"></i>
+        Avis clients
+      </span>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        Ce que disent <span class="text-cameroun-green">nos clients</span>
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Découvrez les retours de nos clients sur leur expérience chez "Saveurs du Cameroun".
+      </p>
+    </div>
+
+    <!-- ===== GRILLE DES TÉMOIGNAGES ===== -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      @for (temoignage of temoignages; track temoignage.id) {
+        <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-cameroun-green hover:shadow-xl transition duration-300">
+
+          <!-- En-tête : Avatar + Nom + Date -->
+          <div class="flex items-center space-x-4 mb-4">
+            <!-- Avatar -->
+            <div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl"
+                 [class]="temoignage.couleur">
+              {{ temoignage.avatar }}
+            </div>
+
+            <!-- Nom et ville -->
+            <div class="flex-1">
+              <h4 class="font-bold text-gray-800">{{ temoignage.nom }}</h4>
+              <span class="text-sm text-gray-500">
+                <i class="fas fa-map-marker-alt mr-1"></i>
+                {{ temoignage.ville }}
+              </span>
+              <span class="text-sm text-gray-400 mx-2">•</span>
+              <span class="text-sm text-gray-400">{{ temoignage.date }}</span>
+            </div>
+          </div>
+
+          <!-- Étoiles -->
+          <div class="flex items-center mb-3">
+            @for (star of [1,2,3,4,5]; track star) {
+              <i class="fas fa-star text-sm"
+                 [class.text-cameroun-yellow]="star <= temoignage.note"
+                 [class.text-gray-300]="star > temoignage.note">
+              </i>
+            }
+            <span class="ml-2 text-sm font-semibold text-gray-700">
+              {{ temoignage.note }}/5
+            </span>
+          </div>
+
+          <!-- Commentaire -->
+          <p class="text-gray-600 text-sm leading-relaxed italic">
+            "{{ temoignage.commentaire }}"
+          </p>
+
+          <!-- Badge "Client vérifié" -->
+          <div class="mt-4 pt-3 border-t border-gray-100">
+            <span class="text-xs text-cameroun-green font-medium">
+              <i class="fas fa-check-circle mr-1"></i>
+              Client vérifié
+            </span>
+          </div>
+
+        </div>
+      }
+
+    </div>
+
+    <!-- ===== STATISTIQUES GLOBALES ===== -->
+    <div class="mt-12 bg-cameroun-green/10 rounded-xl p-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+
+        <div>
+          <div class="text-2xl font-bold text-cameroun-green">4.8/5</div>
+          <div class="text-sm text-gray-600">Note moyenne</div>
+        </div>
+
+        <div>
+          <div class="text-2xl font-bold text-cameroun-green">128</div>
+          <div class="text-sm text-gray-600">Avis vérifiés</div>
+        </div>
+
+        <div>
+          <div class="text-2xl font-bold text-cameroun-green">95%</div>
+          <div class="text-sm text-gray-600">Clients satisfaits</div>
+        </div>
+
+        <div>
+          <div class="text-2xl font-bold text-cameroun-green">2026</div>
+          <div class="text-sm text-gray-600">Ouvert depuis</div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+

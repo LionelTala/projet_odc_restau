@@ -1,0 +1,79 @@
+
+ <!-- ============================================ -->
+<!-- ZONE 4 : À PROPOS                          -->
+<!-- ============================================ -->
+
+<section id="apropos" class="py-16 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- ===== GRILLE 2 COLONNES ===== -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+      <!-- ===== COLONNE GAUCHE : IMAGE ===== -->
+      <div class="order-2 md:order-1">
+        <div class="relative">
+          <!-- Image principale -->
+          <img [src]="restaurant.image"
+               [alt]="restaurant.nom"
+               class="w-full h-96 object-cover rounded-xl shadow-xl">
+
+          <!-- Badge flottant -->
+          <div class="absolute -bottom-4 -right-4 bg-cameroun-yellow text-gray-900 px-4 py-2 rounded-lg shadow-lg">
+            <i class="fas fa-star text-sm mr-1"></i>
+            <span class="font-bold">4.9/5</span>
+            <span class="text-sm ml-1">⭐ 100+ avis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== COLONNE DROITE : TEXTE ===== -->
+      <div class="order-1 md:order-2">
+
+        <!-- Badge -->
+        <span class="inline-block bg-cameroun-yellow/20 text-cameroun-green px-4 py-1 rounded-full text-sm font-semibold mb-4">
+          <i class="fas fa-info-circle mr-2"></i>
+          Notre histoire
+        </span>
+
+        <!-- Titre -->
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          Depuis <span class="text-cameroun-green">{{ restaurant.annee }}</span>
+        </h2>
+
+        <!-- Description -->
+        <p class="text-gray-600 text-lg leading-relaxed mb-4">
+          {{ restaurant.description }}
+        </p>
+        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+          {{ restaurant.histoire }}
+        </p>
+
+        <!-- Valeurs (chiffres clés) -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          @for (valeur of restaurant.valeurs; track valeur.label) {
+            <div class="text-center">
+              <div class="text-2xl md:text-3xl font-bold text-cameroun-green">
+                {{ valeur.chiffre }}
+              </div>
+              <div class="text-xs md:text-sm text-gray-500">
+                {{ valeur.label }}
+              </div>
+            </div>
+          }
+        </div>
+
+        <!-- Bouton -->
+        <div class="mt-6">
+          <a href="#contact"
+             class="inline-block bg-cameroun-green text-white px-6 py-3 rounded-full font-semibold hover:bg-cameroun-red transition duration-300">
+            <i class="fas fa-phone mr-2"></i>
+            Nous contacter
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

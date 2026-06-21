@@ -1,0 +1,66 @@
+<!-- ============================================ -->
+<!-- ZONE 3 : SPÉCIALITÉS                        -->
+<!-- ============================================ -->
+
+<section id="specialites" class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- En-tête -->
+    <div class="text-center mb-12">
+      <span class="inline-block bg-cameroun-yellow/20 text-cameroun-green px-4 py-1 rounded-full text-sm font-semibold mb-4">
+        <i class="fas fa-utensils mr-2"></i>
+        Notre carte
+      </span>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        Nos <span class="text-cameroun-green">Spécialités</span>
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Découvrez nos plats traditionnels préparés avec des ingrédients frais et authentiques.
+      </p>
+    </div>
+
+    <!-- GRILLE - AVEC @for -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      @for (plat of specialites; track plat.nom) {
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+          <!-- Image -->
+          <div class="h-48 overflow-hidden bg-gray-200">
+            <img [src]="plat.image"
+                 [alt]="plat.nom"
+                 class="w-full h-full object-cover object-center hover:scale-110 transition duration-500">
+          </div>
+
+          <!-- Contenu -->
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-bold text-gray-900">{{ plat.nom }}</h3>
+              <span class="text-lg font-bold text-green-600">{{ plat.prix }}</span>
+            </div>
+            <p class="text-gray-600 text-sm line-clamp-3 mb-4">
+              {{ plat.description }}
+            </p>
+            <a href="#reservation"
+               class="inline-block bg-cameroun-green text-white px-4 py-2 rounded-lg hover:bg-cameroun-red transition duration-300 text-sm font-medium">
+              <i class="fas fa-shopping-cart mr-2"></i>
+              Commander
+            </a>
+          </div>
+
+        </div>
+      }
+
+    </div>
+
+    <!-- Bouton voir tout -->
+    <div class="text-center mt-12">
+      <a href="#carte"
+         class="inline-block bg-yellow-500   text-c px-8 py-3 rounded-full font-semibold hover:bg-green-600 hover:text-white transition duration-300">
+        <i class="fas fa-eye mr-2"></i>
+        Voir toute notre carte
+      </a>
+    </div>
+
+  </div>
+</section>

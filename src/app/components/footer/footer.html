@@ -1,0 +1,126 @@
+
+<!-- ============================================ -->
+<!-- ZONE 7 : FOOTER (Pied de page)              -->
+<!-- ============================================ -->
+
+<footer class="bg-gray-900 text-white border-t border-gray-800">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- ===== GRILLE DES 4 COLONNES ===== -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+      <!-- ===== COLONNE 1 : RESTAURANT ===== -->
+      <div>
+        <!-- Logo + Nom -->
+        <div class="flex items-center space-x-2 mb-4">
+          <i class="fas fa-utensils text-2xl text-cameroun-yellow"></i>
+          <span class="text-xl font-bold">Saveurs du Cameroun</span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+          {{ footer.description }}
+        </p>
+
+        <!-- Réseaux sociaux -->
+        <div class="flex space-x-3">
+          @for (reseau of footer.reseaux; track reseau.nom) {
+            <a href="#"
+               class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white transition duration-300 hover:scale-110"
+               [class]="reseau.couleur">
+              <i [class]="reseau.icone"></i>
+            </a>
+          }
+        </div>
+      </div>
+
+      <!-- ===== COLONNE 2 : LIENS UTILES ===== -->
+      <div>
+        <h3 class="text-lg font-bold mb-4 text-white">Liens utiles</h3>
+        <ul class="space-y-2">
+          @for (lien of footer.liens; track lien.nom) {
+            <li>
+              <a href="{{ lien.href }}"
+                 class="text-gray-400 hover:text-cameroun-yellow transition duration-300 flex items-center space-x-2">
+                <i class="fas fa-chevron-right text-xs text-cameroun-green"></i>
+                <span>{{ lien.nom }}</span>
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <!-- ===== COLONNE 3 : HORAIRES ===== -->
+      <div>
+        <h3 class="text-lg font-bold mb-4 text-white">Horaires</h3>
+        <ul class="space-y-2">
+          @for (horaire of footer.horaires; track horaire.jour) {
+            <li class="flex justify-between text-sm">
+              <span class="text-gray-400">{{ horaire.jour }}</span>
+              <span class="text-cameroun-yellow font-medium">{{ horaire.heures }}</span>
+            </li>
+          }
+        </ul>
+
+        <!-- Badge supplémentaire -->
+        <div class="mt-4 pt-4 border-t border-gray-800">
+          <span class="inline-block bg-cameroun-green/20 text-cameroun-green px-3 py-1 rounded-full text-xs font-semibold">
+            <i class="fas fa-check-circle mr-1"></i>
+            Ouvert 7j/7
+          </span>
+        </div>
+      </div>
+
+      <!-- ===== COLONNE 4 : CONTACT ===== -->
+      <div>
+        <h3 class="text-lg font-bold mb-4 text-white">Contact</h3>
+
+        <!-- Téléphone -->
+        <div class="flex items-start space-x-3 mb-3">
+          <i class="fas fa-phone text-cameroun-yellow mt-1"></i>
+          <div>
+            <p class="text-gray-400 text-xs">Téléphone</p>
+            <p class="text-white font-medium">{{ footer.contact.telephone }}</p>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="flex items-start space-x-3 mb-3">
+          <i class="fas fa-envelope text-cameroun-yellow mt-1"></i>
+          <div>
+            <p class="text-gray-400 text-xs">Email</p>
+            <p class="text-white font-medium text-sm">{{ footer.contact.email }}</p>
+          </div>
+        </div>
+
+        <!-- Adresse -->
+        <div class="flex items-start space-x-3">
+          <i class="fas fa-map-marker-alt text-cameroun-yellow mt-1"></i>
+          <div>
+            <p class="text-gray-400 text-xs">Adresse</p>
+            <p class="text-white text-sm">{{ footer.contact.adresse }}</p>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <!-- ===== BARRE DE SÉPARATION ===== -->
+    <div class="border-t border-gray-800 mt-8 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+
+        <!-- Copyright -->
+        <p class="text-gray-500 text-sm">
+          <i class="fas fa-copyright mr-1"></i>
+          {{ footer.annee }} Saveurs du Cameroun. Tous droits réservés.
+        </p>
+
+
+
+      </div>
+    </div>
+
+  </div>
+</footer>

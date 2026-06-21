@@ -1,0 +1,58 @@
+<!-- ============================================ -->
+<!-- ZONE 2 : HERO (Bannière d'accueil)          -->
+<!-- ============================================ -->
+
+<section class="relative bg-gray-900 text-white min-h-[600px] h-screen flex items-center">
+
+  <!-- ===== IMAGE DE FOND ===== -->
+  <!-- On utilise une image gratuite d'Unsplash (cuisine africaine) -->
+  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+       style="background-image: url('assets/images/ndole2.jpeg');">
+  </div>
+
+  <!-- ===== OVERLAY (assombrit l'image pour que le texte soit lisible) ===== -->
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <!-- ===== CONTENU (au-dessus de l'image) ===== -->
+  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+    <!-- Badge / petite étiquette -->
+    <div class="inline-block bg-cameroun-yellow text-green-600 px-4 py-1 rounded-full text-sm font-semibold mb-6">
+      <i class="fas fa-utensils mr-2"></i>
+      Cuisine authentique
+    </div>
+
+    <!-- Titre principal -->
+    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
+      <span class="text-green-700">Saveurs </span>
+      <span class="text-red-700">du</span>
+      <span class="text-yellow-500">Cameroun</span>
+    </h1>
+
+    <!-- Sous-titre -->
+    <p class="text-lg sm:text-xl md:text-2xl text-white max-w-3xl mx-auto mb-8">
+      Découvrez l'authenticité de la cuisine camerounaise dans une ambiance chaleureuse et conviviale.
+    </p>
+
+    <!-- Boutons d'action -->
+    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+      <a href="#reservation"
+         class="bg-yellow-500 text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-white hover:scale-105 transform transition duration-300 flex items-center space-x-2">
+        <i class="fas fa-calendar-check"></i>
+        <span>Réserver une table</span>
+      </a>
+      <a href="#specialites"
+         class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-red-600 hover:text-white transform transition duration-300 flex items-center space-x-2">
+        <i class="fas fa-utensils"></i>
+        <span>Voir nos spécialités</span>
+      </a>
+    </div>
+
+    <!-- Indicateur de défilement (petit détail sympa) -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden sm:block animate-bounce">
+      <i class="fas fa-chevron-down text-white/50 text-2xl"></i>
+    </div>
+
+  </div>
+
+</section>
